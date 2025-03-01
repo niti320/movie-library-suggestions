@@ -1,0 +1,94 @@
+
+.container{
+  display: flex;
+  height: 100vh;
+  z-index: 100 !important;
+}
+
+.form-container {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Heading for the form */
+.form-container h1 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Logged in message */
+.logged-in-message {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Input field styles */
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color:  #222 !important;
+  color: white;
+}
+
+.form-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.form-container input:active {
+  border-color: #007bff;
+  outline: none;
+}
+
+
+/* Button styles */
+.form-container button {
+  width: 100%;
+  background-color: #4cf0ac;
+  color: rgb(41, 41, 41);
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer message and link */
+.form-container p {
+  color: #bbb;
+  margin-top: 10px;
+}
+
+.form-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 15px;
+}

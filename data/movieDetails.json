@@ -1,0 +1,283 @@
+[
+    {
+      "name": "The Shawshank Redemption",
+      "director": "Frank Darabont",
+      "year": 1994,
+      "cast": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
+      "posterUrl": "Posters/shawshank.jpg",
+      "imdbRating": 9.3
+    },
+    {
+      "name": "The Godfather",
+      "director": "Francis Ford Coppola",
+      "year": 1972,
+      "cast": ["Marlon Brando", "Al Pacino", "James Caan"],
+      "posterUrl": "Posters/godfather.jpg",
+      "imdbRating": 9.2
+    },
+    {
+      "name": "The Dark Knight",
+      "director": "Christopher Nolan",
+      "year": 2008,
+      "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+      "posterUrl": "Posters/dark_knight.jpg",
+      "imdbRating": 9.0
+    },
+    {
+      "name": "The Godfather: Part II",
+      "director": "Francis Ford Coppola",
+      "year": 1974,
+      "cast": ["Al Pacino", "Robert De Niro", "Diane Keaton"],
+      "posterUrl": "Posters/godfather2.webp",
+      "imdbRating": 9.0
+    },
+    {
+      "name": "12 Angry Men",
+      "director": "Sidney Lumet",
+      "year": 1957,
+      "cast": ["Henry Fonda", "Lee J. Cobb", "Martin Balsam"],
+      "posterUrl": "Posters/12angrymen.jpg",
+      "imdbRating": 9.0
+    },
+    {
+      "name": "Schindler's List",
+      "director": "Steven Spielberg",
+      "year": 1993,
+      "cast": ["Liam Neeson", "Ben Kingsley", "Ralph Fiennes"],
+      "posterUrl": "Posters/schindler.jpg",
+      "imdbRating": 8.9
+    },
+    {
+      "name": "The Lord of the Rings: The Return of the King",
+      "director": "Peter Jackson",
+      "year": 2003,
+      "cast": ["Elijah Wood", "Viggo Mortensen", "Ian McKellen"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51ge8FgghlL._AC_.jpg",
+      "imdbRating": 8.9
+    },
+    {
+      "name": "Pulp Fiction",
+      "director": "Quentin Tarantino",
+      "year": 1994,
+      "cast": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51O7Oo9dxKL._AC_.jpg",
+      "imdbRating": 8.9
+    },
+    {
+      "name": "The Good, the Bad and the Ugly",
+      "director": "Sergio Leone",
+      "year": 1966,
+      "cast": ["Clint Eastwood", "Eli Wallach", "Lee Van Cleef"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51Ena-n7mRL._AC_.jpg",
+      "imdbRating": 8.8
+    },
+    {
+      "name": "Fight Club",
+      "director": "David Fincher",
+      "year": 1999,
+      "cast": ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51O1dYo6x1L._AC_.jpg",
+      "imdbRating": 8.8
+    },
+    {
+      "name": "Forrest Gump",
+      "director": "Robert Zemeckis",
+      "year": 1994,
+      "cast": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
+      "posterUrl": "https://m.media-amazon.com/images/I/41KTXpJwL4L._AC_.jpg",
+      "imdbRating": 8.8
+    },
+    {
+      "name": "Inception",
+      "director": "Christopher Nolan",
+      "year": 2010,
+      "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51zTiEJ7MRL._AC_.jpg",
+      "imdbRating": 8.8
+    },
+    {
+      "name": "The Matrix",
+      "director": "Lana Wachowski, Lilly Wachowski",
+      "year": 1999,
+      "cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51EG732BV3L._AC_.jpg",
+      "imdbRating": 8.7
+    },
+    {
+      "name": "Goodfellas",
+      "director": "Martin Scorsese",
+      "year": 1990,
+      "cast": ["Ray Liotta", "Robert De Niro", "Joe Pesci"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51P6RmW6iAL._AC_.jpg",
+      "imdbRating": 8.7
+    },
+    {
+      "name": "The Lord of the Rings: The Fellowship of the Ring",
+      "director": "Peter Jackson",
+      "year": 2001,
+      "cast": ["Elijah Wood", "Ian McKellen", "Orlando Bloom"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51lAkdTIJCL._AC_.jpg",
+      "imdbRating": 8.8
+    },
+    {
+      "name": "Star Wars: Episode IV - A New Hope",
+      "director": "George Lucas",
+      "year": 1977,
+      "cast": ["Mark Hamill", "Harrison Ford", "Carrie Fisher"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51tMFRdHsIL._AC_.jpg",
+      "imdbRating": 8.6
+    },
+    {
+      "name": "Seven Samurai",
+      "director": "Akira Kurosawa",
+      "year": 1954,
+      "cast": ["Toshiro Mifune", "Takashi Shimura", "Kuniko Miyake"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51gpvHpJszL._AC_.jpg",
+      "imdbRating": 8.6
+    },
+    {
+      "name": "City of God",
+      "director": "Fernando Meirelles, Kátia Lund",
+      "year": 2002,
+      "cast": ["Alexandre Rodrigues", "Matheus Nachtergaele", "César Ferrario"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51U6taFkF+L._AC_.jpg",
+      "imdbRating": 8.6
+    },
+    {
+      "name": "Se7en",
+      "director": "David Fincher",
+      "year": 1995,
+      "cast": ["Brad Pitt", "Morgan Freeman", "Kevin Spacey"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51BrcmIcLkL._AC_.jpg",
+      "imdbRating": 8.6
+    },
+    {
+      "name": "The Silence of the Lambs",
+      "director": "Jonathan Demme",
+      "year": 1991,
+      "cast": ["Jodie Foster", "Anthony Hopkins", "Lawrence A. Bonney"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51yV3bAtxKL._AC_.jpg",
+      "imdbRating": 8.6
+    },
+    {
+      "name": "The Usual Suspects",
+      "director": "Bryan Singer",
+      "year": 1995,
+      "cast": ["Kevin Spacey", "Gabriel Byrne", "Chazz Palminteri"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51MGF1VxJLL._AC_.jpg",
+      "imdbRating": 8.5
+    },
+    {
+      "name": "Léon: The Professional",
+      "director": "Luc Besson",
+      "year": 1994,
+      "cast": ["Jean Reno", "Natalie Portman", "Gary Oldman"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51TcD9uN7zL._AC_.jpg",
+      "imdbRating": 8.5
+    },
+    {
+      "name": "The Departed",
+      "director": "Martin Scorsese",
+      "year": 2006,
+      "cast": ["Leonardo DiCaprio", "Matt Damon", "Jack Nicholson"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51bYUEEEX4L._AC_.jpg",
+      "imdbRating": 8.5
+    },
+    {
+      "name": "Whiplash",
+      "director": "Damien Chazelle",
+      "year": 2014,
+      "cast": ["Miles Teller", "J.K. Simmons", "Paul Reiser"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51V1R7ktkIL._AC_.jpg",
+      "imdbRating": 8.5
+    },
+    {
+      "name": "The Prestige",
+      "director": "Christopher Nolan",
+      "year": 2006,
+      "cast": ["Christian Bale", "Hugh Jackman", "Scarlett Johansson"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51u0rmR-zpL._AC_.jpg",
+      "imdbRating": 8.5
+    },
+    {
+      "name": "Memento",
+      "director": "Christopher Nolan",
+      "year": 2000,
+      "cast": ["Guy Pearce", "Carrie-Anne Moss", "Joe Pantoliano"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51O1X0G2eKL._AC_.jpg",
+      "imdbRating": 8.4
+    },
+    {
+      "name": "Apocalypse Now",
+      "director": "Francis Ford Coppola",
+      "year": 1979,
+      "cast": ["Martin Sheen", "Marlon Brando", "Robert Duvall"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51gD8GyJDSL._AC_.jpg",
+      "imdbRating": 8.4
+    },
+    {
+      "name": "Alien",
+      "director": "Ridley Scott",
+      "year": 1979,
+      "cast": ["Sigourney Weaver", "Tom Skerritt", "John Hurt"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51NTtHL9-nL._AC_.jpg",
+      "imdbRating": 8.4
+    },
+    {
+      "name": "The Lion King",
+      "director": "Roger Allers, Rob Minkoff",
+      "year": 1994,
+      "cast": ["Matthew Broderick", "James Earl Jones", "Jeremy Irons"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51GE9EwlZRL._AC_.jpg",
+      "imdbRating": 8.5
+    },
+    {
+      "name": "Sunset Boulevard",
+      "director": "Billy Wilder",
+      "year": 1950,
+      "cast": ["Gloria Swanson", "William Holden", "Erich von Stroheim"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51oMFv1I-nL._AC_.jpg",
+      "imdbRating": 8.4
+    },
+    {
+      "name": "A Beautiful Mind",
+      "director": "Ron Howard",
+      "year": 2001,
+      "cast": ["Russell Crowe", "Ed Harris", "Jennifer Connelly"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51R2FL1NXXL._AC_.jpg",
+      "imdbRating": 8.2
+    },
+    {
+      "name": "The Green Mile",
+      "director": "Frank Darabont",
+      "year": 1999,
+      "cast": ["Tom Hanks", "Michael Clarke Duncan", "David Morse"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51w14tuGCoL._AC_.jpg",
+      "imdbRating": 8.6
+    },
+    {
+      "name": "The Intouchables",
+      "director": "Olivier Nakache, Éric Toledano",
+      "year": 2011,
+      "cast": ["François Cluzet", "Omar Sy", "Anne Le Ny"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51w81Wb9t0L._AC_.jpg",
+      "imdbRating": 8.5
+    },
+    {
+      "name": "The Sixth Sense",
+      "director": "M. Night Shyamalan",
+      "year": 1999,
+      "cast": ["Bruce Willis", "Haley Joel Osment", "Toni Collette"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51Bh9k5DEIL._AC_.jpg",
+      "imdbRating": 8.1
+    },
+    {
+      "name": "The Grand Budapest Hotel",
+      "director": "Wes Anderson",
+      "year": 2014,
+      "cast": ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
+      "posterUrl": "https://m.media-amazon.com/images/I/51xGd4lh5-L._AC_.jpg",
+      "imdbRating": 8.1
+    }
+  ]
+  
