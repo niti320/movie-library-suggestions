@@ -44,20 +44,20 @@ function HomePage() {
 
   const [loading, setLoading] = useState(true); 
 
-  useEffect(() => {
-    const checkLoggedInUser = async () => {
-      try {
-        const user = await account.get();
-        setLoggedInUser(user);
-      } catch (err) {
-        // setLoggedInUser(null);
-      }
-      setLoading(false); 
-    };
-    checkLoggedInUser();
-    fetchAndStoreUserData();
+useEffect(() => {
+  const checkLoggedInUser = async () => {
+    try {
+      const user = await account.get();
+      setLoggedInUser(user);
+      fetchAndStoreUserData();
+    } catch (err) {
+      setLoggedInUser(null);
+    }
+    setLoading(false);
+  };
 
-  }, []);
+  checkLoggedInUser();
+}, []);
 
 
   console.log("Favorites: ", Favorite);
@@ -260,7 +260,7 @@ function HomePage() {
     
       localStorage.setItem("Favorite", JSON.stringify(favResponse.documents));
     } catch (error) {
-      // console.error("Error fetching user data:", error);
+      console.error("Error fetching user data:", error);
     }
   };
 
