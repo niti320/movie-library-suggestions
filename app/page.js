@@ -34,7 +34,7 @@ function HomePage() {
     ];
 
   // Fetch "Favorite" from localStorage (new structure)
-  const Favorite = useMemo(() => JSON.parse(localStorage.getItem("Favorite")) || [], []);
+  
 
 
   const [loading, setLoading] = useState(true); // Track loading state
@@ -58,6 +58,7 @@ function HomePage() {
   console.log("Favorites: ", Favorite);
 
   useEffect(() => {
+    const Favorite = useMemo(() => JSON.parse(localStorage.getItem("Favorite")) || [], []);
     if (!Favorite.length) return;
 
     const genreCount = Favorite.reduce((acc, movie) => {
