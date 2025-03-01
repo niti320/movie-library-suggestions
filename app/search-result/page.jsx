@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "@/styles/App.css"; 
 import AOS from 'aos';
-import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Card from "@/src/components/Card";
 
 function SearchResult() {
@@ -10,11 +10,10 @@ function SearchResult() {
   
   const [searchTerm, setSearchTerm] = useState('');
   const [movies, setMovies] = useState([]);
-
   const [error, setError] = useState(null);
   const [notFound, setNotFound] = useState(false); 
-  const searchParams = useSearchParams();
 
+  const router = useRouter();
 
   useEffect(() => {
     AOS.init({
@@ -25,17 +24,15 @@ function SearchResult() {
   }, []);
 
   useEffect(() => {
-    const query = searchParams.get('query'); 
-    if (query) {
-      setSearchTerm(query.trim());
-      handleSearchSubmit(query.trim()); 
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const query = params.get("query"); 
+      if (query) {
+        setSearchTerm(query.trim());
+        handleSearchSubmit(query.trim()); 
+      }
     }
-  }, [searchParams]);
-
-  const handleSearchChange = (event) => {
-    let searchValue = event.target.value;
-    setSearchTerm(searchValue);
-  };
+  }, []);
 
   const handleSearchSubmit = async (query) => {
     if (!query) return;
@@ -63,11 +60,9 @@ function SearchResult() {
     }
   };
 
-
   return (
     <div className="container">
       <div className="miniContainer">
-       
         {error && <p style={{ color: 'red' }}>{error}</p>}
         <div className="gridContainer" data-aos="fade-up">
           {notFound ? (
