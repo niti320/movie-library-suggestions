@@ -50,7 +50,7 @@ function HomePage() {
         const user = await account.get();
         setLoggedInUser(user);
       } catch (err) {
-        setLoggedInUser(null);
+        // setLoggedInUser(null);
       }
       setLoading(false); 
     };
@@ -260,7 +260,7 @@ function HomePage() {
     
       localStorage.setItem("Favorite", JSON.stringify(favResponse.documents));
     } catch (error) {
-      console.error("Error fetching user data:", error);
+      // console.error("Error fetching user data:", error);
     }
   };
 
