@@ -19,13 +19,13 @@ A sleek and interactive movie library built with **Next.js**, fetching data from
 ### 🔍 Search Movies
 ![Search Screenshot](./screenshots/s1.png)
 
-### ⭐ Add to Favorites
+### ⭐ Reommendations based on your likings
 ![Favorites Screenshot](./screenshots/s2.png)
 
-### 🎥 Watchlist
+### 🎥 Suggestions based on your most loved genres
 ![Watchlist Screenshot](./screenshots/s3.png)
 
-### 🔒 Authentication
+### Suggestions based on collections
 ![Auth Screenshot](./screenshots/image.png)
 
 ---
