@@ -34,8 +34,8 @@ A sleek and interactive movie library built with **Next.js**, fetching data from
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/movie-library.git
-cd movie-library
+git clone https://github.com/niti320/movie-library-suggestions.git
+cd movie-library-suggestions
 ```
 
 ### 2️⃣ Install Dependencies
