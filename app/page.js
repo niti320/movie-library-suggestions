@@ -33,11 +33,16 @@ function HomePage() {
       "tt0816692"  // Interstellar
     ];
 
-  // Fetch "Favorite" from localStorage (new structure)
-  
+
+  const Favorite = useMemo(() => {
+  if (typeof window !== "undefined") {
+    return JSON.parse(localStorage.getItem("Favorite")) || [];
+  }
+  return [];
+}, []);
 
 
-  const [loading, setLoading] = useState(true); // Track loading state
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const checkLoggedInUser = async () => {
@@ -47,7 +52,7 @@ function HomePage() {
       } catch (err) {
         setLoggedInUser(null);
       }
-      setLoading(false); // Mark as finished
+      setLoading(false); 
     };
     checkLoggedInUser();
     fetchAndStoreUserData();
@@ -58,7 +63,6 @@ function HomePage() {
   console.log("Favorites: ", Favorite);
 
   useEffect(() => {
-    const Favorite = useMemo(() => JSON.parse(localStorage.getItem("Favorite")) || [], []);
     if (!Favorite.length) return;
 
     const genreCount = Favorite.reduce((acc, movie) => {
@@ -227,8 +231,8 @@ function HomePage() {
     if (!slider.isDown) return;
     const x = e.pageX - slider.startX;
 
-    // Multiply x by a factor to increase scroll speed
-    const speedFactor = 2; // Adjust this value as needed (e.g., 2, 3, or higher for faster scrolling)
+  
+    const speedFactor = 2; 
     slider.scrollLeft = slider.scrollLeftAtStart - x * speedFactor;
   };
 
@@ -253,7 +257,7 @@ function HomePage() {
         databases.listDocuments(databaseId, favoritesCollection, [Query.equal("user_id", user.$id)]),
       ]);
 
-      // Store in localStorage
+    
       localStorage.setItem("Favorite", JSON.stringify(favResponse.documents));
     } catch (error) {
       console.error("Error fetching user data:", error);
@@ -265,7 +269,7 @@ function HomePage() {
     <div className="homePageContainer">
 
       <div className="backgroundimage">
-        {!loading && !loggedInUser && ( // Hide button until check is complete
+        {!loading && !loggedInUser && ( 
           <Link
             style={{
               display: "flex",
