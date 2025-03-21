@@ -266,28 +266,7 @@ useEffect(() => {
     <div className="homePageContainer">
 
       <div className="backgroundimage">
-        {!loading && !loggedInUser && ( 
-          <Link
-            style={{
-              display: "flex",
-              backgroundColor: "#22ee99",
-              border: "none",
-              color: "black",
-              height: "50px",
-              alignItems: "center",
-              width: "150px",
-              justifyContent: "center",
-              textDecoration: "none",
-              fontWeight: "bold",
-              fontSize: "30px",
-              padding: "2px 10px",
-              cursor: "pointer",
-            }}
-            href="/login"
-          >
-            Login
-          </Link>
-        )}
+        
 
         <div className="TextBox" style={{flexDirection:"column",display:"flex"}}>
           <h1>
@@ -303,8 +282,6 @@ useEffect(() => {
           <p>You can see the top rated section for example</p>
         </div>
       </div>
-
-     
           <div className="innerLayer">
             {SuggestedMovies.length > 0 && (
               <div className="recommendations">
