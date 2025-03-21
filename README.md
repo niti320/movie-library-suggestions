@@ -1,14 +1,13 @@
 # 🎬 Movie Library App
 
-A sleek and interactive movie library built with **Next.js**, fetching data from the **OMDb API** and utilizing **Appwrite** for authentication and user-specific collections.
+A sleek and interactive movie library built with **Next.js**, fetching data from the **OMDb API** and utilizing **Python** and **Scikit-Learn** for Machine Learning.
 
 ---
 
 ## 🚀 Features
 
 - 🔍 **Search movies** from the OMDb API
-- ⭐ **Add movies to favorites & watchlist** (Appwrite database)
-- 🔒 **User authentication** (Appwrite)
+- ⭐ **Add movies to favorites ** 
 - 🎨 **Beautiful UI with animations**
 - ⚡ **Optimized performance with Next.js**
 
@@ -45,10 +44,6 @@ npm install
 
 ### 3️⃣ Create an `.env.local` file
 ```ini
-NEXT_PUBLIC_APPWRITE_PROJECT_ID=your_project_id
-NEXT_PUBLIC_APPWRITE_DATABASE_ID=your_database_id
-NEXT_PUBLIC_APPWRITE_COLLECTION_ID_FAVORITES=your_collection_id
-NEXT_PUBLIC_APPWRITE_COLLECTION_ID_WATCHLIST=your_collection_id
 NEXT_PUBLIC_OMDB_API_KEY=your_omdb_api_key
 ```
 
