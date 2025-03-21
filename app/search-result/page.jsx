@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import AOS from 'aos';
-<<<<<<< HEAD
 import { useRouter } from "next/navigation";
 import Card from "@/src/components/Card";
 
@@ -14,26 +13,12 @@ function SearchResult() {
   const [notFound, setNotFound] = useState(false); 
 
   const router = useRouter();
-=======
-import { useRouter, useSearchParams } from "next/navigation";
-import Card from "@/src/components/Card";
-
-function SearchResult() {
-  const apiKey = process.env.NEXT_PUBLIC_OMDB_API_KEY;
-  const searchParams = useSearchParams();
-  const query = searchParams.get("query") || ""; 
-
-  const [movies, setMovies] = useState([]);
-  const [error, setError] = useState(null);
-  const [notFound, setNotFound] = useState(false);
->>>>>>> 16de906 (removing appwrite)
 
   useEffect(() => {
     AOS.init({ duration: 500, easing: 'ease-in-out', once: true });
   }, []);
 
   useEffect(() => {
-<<<<<<< HEAD
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
       const query = params.get("query"); 
@@ -46,10 +31,6 @@ function SearchResult() {
 
   const handleSearchSubmit = async (query) => {
     if (!query) return;
-=======
-    if (query) fetchMovies(query);
-  }, [query]);  // Runs when `query` updates
->>>>>>> 16de906 (removing appwrite)
 
   const fetchMovies = async (query) => {
     try {
@@ -87,6 +68,6 @@ function SearchResult() {
       </div>
     </div>
   );
-}
+}}
 
 export default SearchResult;

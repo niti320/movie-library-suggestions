@@ -41,7 +41,6 @@ function HomePage() {
 
   const [loading, setLoading] = useState(true); 
 
-<<<<<<< HEAD
 useEffect(() => {
   const checkLoggedInUser = async () => {
     try {
@@ -56,17 +55,6 @@ useEffect(() => {
 
   checkLoggedInUser();
 }, []);
-=======
-  useEffect(() => {
-    const fetchUserData = () => {
-      fetchAndStoreUserData();
-      setLoading(false);
-    };
-  
-    fetchUserData();
-  }, []);
-  
->>>>>>> 16de906 (removing appwrite)
 
 
   console.log("Favorites: ", Favorite);
@@ -253,7 +241,6 @@ useEffect(() => {
 
   const fetchAndStoreUserData = async () => {
     try {
-<<<<<<< HEAD
       const user = await account.get();
       if (!user) return;
 
@@ -268,10 +255,6 @@ useEffect(() => {
 
     
       localStorage.setItem("Favorite", JSON.stringify(favResponse.documents));
-=======
-      const storedFavorites = JSON.parse(localStorage.getItem("Favorite")) || [];
-      localStorage.setItem("Favorite", JSON.stringify(storedFavorites));
->>>>>>> 16de906 (removing appwrite)
     } catch (error) {
       console.error("Error fetching user data:", error);
     }
@@ -283,7 +266,6 @@ useEffect(() => {
     <div className="homePageContainer">
 
       <div className="backgroundimage">
-<<<<<<< HEAD
         {!loading && !loggedInUser && ( 
           <Link
             style={{
@@ -306,9 +288,6 @@ useEffect(() => {
             Login
           </Link>
         )}
-=======
-        
->>>>>>> 16de906 (removing appwrite)
 
         <div className="TextBox" style={{flexDirection:"column",display:"flex"}}>
           <h1>
