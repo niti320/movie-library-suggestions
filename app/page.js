@@ -7,9 +7,6 @@ import recomMovie from "@/ml/recommendations.json";
 import styles from "@/styles/App.css";
 import Card from "@/src/components/Card";
 import Card2 from "@/src/components/card2";
-import { account } from "@/lib/appwrite";
-import { Databases, Query } from "appwrite";
-import { client } from "@/lib/appwrite";
 import Link from "next/link";
 import ButtonN from "@/src/components/but";
 
@@ -44,6 +41,7 @@ function HomePage() {
 
   const [loading, setLoading] = useState(true); 
 
+<<<<<<< HEAD
 useEffect(() => {
   const checkLoggedInUser = async () => {
     try {
@@ -58,6 +56,17 @@ useEffect(() => {
 
   checkLoggedInUser();
 }, []);
+=======
+  useEffect(() => {
+    const fetchUserData = () => {
+      fetchAndStoreUserData();
+      setLoading(false);
+    };
+  
+    fetchUserData();
+  }, []);
+  
+>>>>>>> 16de906 (removing appwrite)
 
 
   console.log("Favorites: ", Favorite);
@@ -241,10 +250,10 @@ useEffect(() => {
     slider.isDown = false;
   };
 
-  const databases = new Databases(client);
 
   const fetchAndStoreUserData = async () => {
     try {
+<<<<<<< HEAD
       const user = await account.get();
       if (!user) return;
 
@@ -259,16 +268,22 @@ useEffect(() => {
 
     
       localStorage.setItem("Favorite", JSON.stringify(favResponse.documents));
+=======
+      const storedFavorites = JSON.parse(localStorage.getItem("Favorite")) || [];
+      localStorage.setItem("Favorite", JSON.stringify(storedFavorites));
+>>>>>>> 16de906 (removing appwrite)
     } catch (error) {
       console.error("Error fetching user data:", error);
     }
   };
+  
 
 
   return (
     <div className="homePageContainer">
 
       <div className="backgroundimage">
+<<<<<<< HEAD
         {!loading && !loggedInUser && ( 
           <Link
             style={{
@@ -291,24 +306,26 @@ useEffect(() => {
             Login
           </Link>
         )}
+=======
+        
+>>>>>>> 16de906 (removing appwrite)
 
-        <div className="TextBox">
+        <div className="TextBox" style={{flexDirection:"column",display:"flex"}}>
           <h1>
-            Add movies to your Favorites
+            Ssearch and add movies to Favorites
             <br />
-            See Suggestions
+            See Suggestions Based on Similarity,
             <br />
-            Based on Similarity, Genre, and Collection.
+             Genre and Collection.
           </h1>
+          <br/>
+          
+          <p>Note: The suggestion feature might not work for all the movies, as the prediction dataset doesn't cover every movie so picking popular movies for suggestion would be preferable</p>
+          <p>You can see the top rated section for example</p>
         </div>
       </div>
 
-      {loading ? (
-        <div className="recommendations">
-          <div className="loading-spinner"></div>
-        </div>
-      ) : (
-        loggedInUser ? (
+     
           <div className="innerLayer">
             {SuggestedMovies.length > 0 && (
               <div className="recommendations">
@@ -369,31 +386,7 @@ useEffect(() => {
               </div>
             ))}
           </div>
-        ) : (
-          <div className="innerLayer">
-
-            <div className="recommendations">
-              {/* <h1>Great Movies</h1> */}
-              <div
-                className="RecommendSection"
-                ref={(ref) => (sectionRefs.current["SuggestedMovies"] = ref)}
-                onMouseDown={(e) => handleMouseDown(e, "SuggestedMovies")}
-                onMouseMove={(e) => handleMouseMove(e, "SuggestedMovies")}
-                onMouseUp={() => handleMouseUpOrLeave("SuggestedMovies")}
-                onMouseLeave={() => handleMouseUpOrLeave("SuggestedMovies")}
-              >
-                {unloggedMovies.map((mov, index) => (
-                  <Card2 key={index} movieId={mov} />
-                ))}
-              </div>
-            </div>
-          </div>
-        )
-      )
-
-      }
-
-
+       
     </div>
   );
 }

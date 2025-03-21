@@ -4,13 +4,6 @@ import React, { useState, useEffect } from "react";
 import styles from "@/styles/App.css";
 import Card from "@/src/components/Card";
 import AOS from "aos";
-import { Client, Databases, Query } from "appwrite";
-
-const client = new Client()
-  .setEndpoint("https://cloud.appwrite.io/v1") // Change if needed
-  .setProject(process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID);
-
-const database = new Databases(client);
 
 function Favorite() {
   const [favorite, setFavorite] = useState([]);
@@ -21,14 +14,10 @@ function Favorite() {
     fetchFavorites();
   }, []);
 
-  const fetchFavorites = async () => {
+  const fetchFavorites = () => {
     try {
-      const response = await database.listDocuments(
-        process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID,
-        process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ID_FAVORITES,
-        [Query.limit(100)]
-      );
-      setFavorite(response.documents);
+      const storedFavorites = JSON.parse(localStorage.getItem("Favorite")) || [];
+      setFavorite(storedFavorites);
     } catch (error) {
       console.error("Error fetching favorites:", error);
     } finally {
@@ -45,14 +34,12 @@ function Favorite() {
   return (
     <div className="container" style={{ flexDirection: "column" }}>
       <div className="miniContainer" style={{ flexDirection: "column" }}>
-
-
         {loading ? (
           <h2 style={{ color: "white" }}>Loading...</h2>
         ) : favorite.length > 0 ? (
           <div className="gridContainer" data-aos="fade-up">
             {favorite.map((movie) => (
-              <Card key={movie.$id} movieId={movie.movie_id} />
+              <Card key={movie.movie_id} movieId={movie.movie_id} />
             ))}
           </div>
         ) : (
