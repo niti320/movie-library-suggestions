@@ -30,27 +30,27 @@ function SearchResult() {
   }, []);
 
   const handleSearchSubmit = async (query) => {
-    if (!query) return;
+  if (!query) return;
 
-  const fetchMovies = async (query) => {
-    try {
-      const response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`);
-      const data = await response.json();
-      if (data.Response === "True") {
-        setMovies(data.Search);
-        setError(null);
-        setNotFound(false);
-      } else {
-        setMovies([]);
-        setError(null);
-        setNotFound(true);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setError("Something went wrong. Please try again.");
+  try {
+    const response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`);
+    const data = await response.json();
+    if (data.Response === "True") {
+      setMovies(data.Search);
+      setError(null);
       setNotFound(false);
+    } else {
+      setMovies([]);
+      setError(null);
+      setNotFound(true);
     }
-  };
+  } catch (error) {
+    console.error("Error:", error);
+    setError("Something went wrong. Please try again.");
+    setNotFound(false);
+  }
+};
+
 
   return (
     <div className="container">
